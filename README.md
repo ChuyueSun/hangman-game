@@ -1,14 +1,8 @@
-# hangman-game# Problem Set 2, hangman.py
-# Name: Chuyue Sun
-# Collaborators: No
-# Time spent: 3hr
+
 
 # Hangman Game
 # -----------------------------------
-# Helper code
-# You don't need to understand this helper code,
-# but you will have to know how to use the functions
-# (so be sure to read the docstrings!)
+
 import random
 import string
 
@@ -60,7 +54,6 @@ def is_word_guessed(secret_word, letters_guessed):
     returns: boolean, True if all the letters of secret_word are in letters_guessed;
       False otherwise
     '''
-    # FILL IN YOUR CODE HERE AND DELETE "pass"
     for i in secret_word:
         if (i not in letters_guessed):
             return False
@@ -77,7 +70,6 @@ def get_guessed_word(secret_word, letters_guessed):
     returns: string, comprised of letters and asterisks (*) that represents
       which letters in secret_word have been guessed so far.
     '''
-    # FILL IN YOUR CODE HERE AND DELETE "pass"
     result=""
     for i in secret_word:
         if i not in letters_guessed:
@@ -95,7 +87,6 @@ def get_available_letters(letters_guessed):
       letters have not yet been guessed. The letters should be returned in
       alphabetical order.
     '''
-    # FILL IN YOUR CODE HERE AND DELETE "pass"
     import string
     result=""
     for i in string.ascii_lowercase:
@@ -130,7 +121,6 @@ def hangman(secret_word):
     
     Follows the other limitations detailed in the problem write-up.
     '''
-    # FILL IN YOUR CODE HERE AND DELETE "pass"
     guesses_remaining=10
     letters_guessed=[]
     print("Welcome to Hangman!")
@@ -190,11 +180,6 @@ def hangman(secret_word):
 
 
 
-# When you've completed your hangman function, scroll down to the bottom
-# of the file and uncomment the lines to test
-# (hint: you might want to pick your own
-# secret_word while you're doing your own testing)
-
 
 # -----------------------------------
 
@@ -237,7 +222,6 @@ def hangman_with_help(secret_word):
     
     Follows the other limitations detailed in the problem write-up.
     '''
-    # FILL IN YOUR CODE HERE AND DELETE "pass"
 
     
     guesses_remaining=10
@@ -299,14 +283,9 @@ def hangman_with_help(secret_word):
         if guesses_remaining==0:
             print("Sorry, you ran out of guesses. The word was",secret_word,".")
         
-    
-# When you've completed your hangman_with_help function, comment the two similar
-# lines below that were used to run the hangman function, and then uncomment
-# those two lines and run this file to test!
-# Hint: You might want to pick your own secret_word while you're testing.
+
 
 if __name__ == "__main__":
-    pass
 
     # To test part 2, comment out the pass line above and
     # uncomment the following two lines.
